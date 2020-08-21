@@ -1,0 +1,512 @@
+:root{
+  --color1: rgb(219, 106, 1);
+  --color2: rgba(23,180,83,.0788);
+  --color3:rgb(0, 0, 0,);
+  --fondo: #f2f2f2;
+  --titulos: 33px;
+  --margenes: 60px;
+  --espacios: 10px;
+  --espacios-contenidos:45px;
+} /* Variables */
+
+*{
+     margin:0;
+     padding: 0;
+     box-sizing: border-box;
+}
+
+body{
+     font-family: 'Open Sans', sans-serif;
+     background: var(--fondo);
+}
+
+img{
+  vertical-align: top;
+}
+
+/* *** PreLoader *** */
+.hidden{
+  overflow: hidden;
+}
+
+.centrado{
+  position: fixed;
+  width: 100vw;
+  height: 100vh;
+  background: #000;
+  z-index: 100;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.lds-heart {
+     display: inline-block;
+     position: relative;
+     width: 80px;
+     height: 80px;
+     transform: rotate(45deg);
+     transform-origin: 40px 40px;
+   }
+   .lds-heart div {
+     top: 32px;
+     left: 32px;
+     position: absolute;
+     width: 32px;
+     height: 32px;
+     background: #fcf;
+     animation: lds-heart 1.2s infinite cubic-bezier(0.215, 0.61, 0.355, 1);
+   }
+   .lds-heart div:after,
+   .lds-heart div:before {
+     content: " ";
+     position: absolute;
+     display: block;
+     width: 32px;
+     height: 32px;
+     background: #fcf;
+   }
+   .lds-heart div:before {
+     left: -24px;
+     border-radius: 50% 0 0 50%;
+   }
+   .lds-heart div:after {
+     top: -24px;
+     border-radius: 50% 50% 0 0;
+   }
+   @keyframes lds-heart {
+     0% {
+       transform: scale(0.95);
+     }
+     5% {
+       transform: scale(1.1);
+     }
+     39% {
+       transform: scale(0.85);
+     }
+     45% {
+       transform: scale(1);
+     }
+     60% {
+       transform: scale(0.95);
+     }
+     100% {
+       transform: scale(0.9);
+     }
+   }
+   
+
+   /* *** Header *** */
+
+   header{
+     width: 100%; 
+     height: 1000px; 
+     background: linear-gradient(to bottom,
+       rgba(251, 194, 235, .35),
+      rgb(161, 140, 209) 
+     ), url(/imagenes/cosplays/cosplay26.png);
+     background-attachment: fixed;
+     background-position: center;
+     background-size: cover;
+     
+   }
+
+   nav{
+     width: 100%;
+     position: fixed;
+     box-shadow: 0 0 10px 0 rgba(0,0,0,.5);
+   }
+
+   .nav1{
+    background: transparent;
+    height: 80px;
+    color: #fff;
+   }
+
+   .nav2{
+     background: var(--fondo);
+     height: 100px;
+     color: #000;
+    }
+
+    .contenedor-nav{
+      display: flex;
+      margin: auto;
+      width: 90%;
+      justify-content: space-between;
+      align-items: center;
+      max-width: 1000px;
+      height: inherit;
+      overflow: hidden;
+    }
+
+
+    nav .enlaces a{
+      display: inline-block;
+      padding: 5px 0;
+      margin-right: 17px;
+      font-size: 17px;
+      font-weight: 300;
+      text-decoration: none;
+      border-bottom: 3px solid transparent;
+      color: inherit;
+    }
+
+    nav .enlaces a:hover{
+      border-bottom: 3px solid #a18cd1;
+      transition: 0.6s;
+    }
+
+    .logo, .logo img{ height: 80px;}
+
+    .icono{
+      display:none;
+      font-size: 24px;
+      padding: 23.5px 20px;
+    }
+
+    .textos{
+      width: 100%;
+      height: 100%;
+      display: flex;
+      justify-content: center;
+      flex-direction: column;
+      align-items: center;
+      color: fff;
+      overflow: hidden;
+      text-align: center;
+    }
+
+    .textos>h1{
+      font-size: 80px;
+    }
+
+    .textos>h2{
+      font-size: 30px;
+      font-weight: 300;
+    }
+
+    /* *** Main *** */
+    
+    .fondo{
+      background: url(/fondo/fondo\ finalizado\ light.png);
+    }
+    
+    .contenedor{
+      margin: auto;
+      padding: var(--margenes) 0;
+      width: 90%;
+      max-width: 1000px;
+      text-align: center;
+      overflow: hidden;
+    }
+
+    .contenedor h3{
+      font-size: var(--titulos);
+      color: #000;
+      margin-bottom: var(--espacios);
+    }
+
+    .contenedor p{
+      font-weight: 300;
+      color: #f2f2f2;
+    }
+
+    .after::after{
+      content: '';
+      display: block;
+      margin: auto;
+      margin-top: var(--espacios);
+      width: 250px;
+      height: 2px;
+      background: var(--color1);
+      margin-bottom: var(--espacios-contenidos);
+    }
+
+
+    .card{  /* Imagenes Admins */
+      display: flex;
+      justify-content: space-around;
+      flex-wrap: wrap;
+    }
+
+    .content-card{
+      width: 31%;
+      box-shadow: 0 0 6px 0 rgba(0,0,0,.5);
+      overflow: hidden;
+      height: 400px;
+    }
+
+    .people{
+      height: 80%;
+    }
+
+    .content-card img{
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+
+    .texto-admin{
+      height: 20%;
+      width: 100%;
+      padding: var(--espacios) 0;
+    }
+
+    /* *** Acerca de la Gang *** */
+
+    .about{
+      background: #59C173;  /* fallback for old browsers */
+      background: -webkit-linear-gradient(to left, #5D26C1, #a17fe0, #59C173);  /* Chrome 10-25, Safari 5.1-6 */
+      background: linear-gradient(to left, #5D26C1, #a17fe0, #59C173); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+      height: auto;
+    }
+
+    .contenidos{
+      display: flex;
+      color:#fff;
+      justify-content: space-between;
+      margin: auto;
+      flex-wrap: wrap;
+    }
+    
+    .caja-contenidos>h4{
+      margin-bottom: var(--espacios);
+    }
+
+    .caja-contenidos>p{
+      text-align: center;
+    }
+
+
+    .fondoFotos{
+      background: url(/fondo/fondo\ finalizado\ light.png);
+    }
+
+    .work-contenedor h3{
+      text-align: center;
+    }
+
+    .work-contenedor p{
+      text-align: center;
+    }
+
+    .botones-work{
+      overflow: hidden;
+      
+    }
+
+    .botones-work li{
+      display: inline-block;
+      text-align: center;
+      margin-left: var(--espacios);
+      margin-bottom: var(--espacios-contenidos);
+      padding: 6px 12px;
+      border: 1px solid #000;
+      list-style: none;
+      color: #fff;
+    }
+    
+    .botones-work li:hover{
+      background: #000;
+      color: #fff;
+      cursor: pointer;
+    }
+
+    .botones-work .active{
+      background: #000;
+      color: #fff;
+    }
+
+    .galeria-work{
+      display:flex;
+      flex-wrap: wrap;
+      justify-content: space-around;
+      /* cursor: pointer; */
+    }
+
+    .galeria-work .cont-work{
+      width: 31%;
+      box-shadow: 0 0 6px 0 rgba(0,0,0,.5);
+      height: 300px;
+      overflow: hidden;
+      margin-bottom: var(--espacios-contenidos);
+    }
+
+    .imagen-light{
+      position: fixed;
+      background: rgba(0, 0, 0, .6);
+      width: 100%;
+      height: 100%;
+      top: 0;
+      left: 0;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      transform: translate(100%);
+      transition: transform .2s ease-in-out;
+ }
+
+ .agregar-imagen{
+  object-fit: cover;
+  width: 60%;
+  border-radius: 10px;
+  transform: scale(0);
+  transition: transform .3s .2s;
+}
+
+.show{
+  transform: translate(0);
+}
+
+.showImage{
+  transform: scale(1);
+}
+
+    .img-work{
+      height: 90%;
+      width: 100%;
+    }
+
+    .img-work img{
+      height: 100%;
+      width: 100%;
+      object-fit: cover;
+    }
+
+    .textos-work{
+      height: 10%;
+      text-align: center;
+    }
+
+    .textos-work h4{
+      line-height: 30px;
+    }
+
+
+    /* *** Footer *** */
+
+    footer{
+      background: linear-gradient(to top, #5f72bd 0%, #9b23ea 100%);
+    }
+
+    .marca-logo{
+      width: 40%;
+      margin: auto;
+      margin-bottom: var(--espacios);
+    }
+
+    .marca-logo img{
+      width: 100%;
+    }
+
+    .iconos{
+      display: flex;
+      margin: auto;
+      justify-content: space-around;
+      width: 100%;
+    }
+    
+    .iconos :hover i{
+      color:#000;
+    }
+    
+    .fab{
+      font-size: 60px;
+      color: #fff;
+      margin-bottom: var(--espacios);
+      display: inline-block;
+    }
+
+    footer p{
+      margin-top: var(--espacios);
+    }
+
+    @media screen and (max-width: 700px){
+      .nav2{
+        color: #fff;
+      }
+
+      .icono{
+        display:block;  
+        cursor: pointer;
+      }
+
+      .enlaces{
+        position: fixed;
+        top: 80px;
+        background: #614988;
+        left: 0;
+        height: 100%;
+        transition: 1s;
+        width: 0;
+        overflow: hidden;
+      }
+
+      .agregar-imagen{
+        width: 80%;
+   }
+
+      .enlaces a{
+        display: block;
+        width: 100%;
+        height: 50px;
+        padding: 20px;
+        text-align: center;
+        background: #7758aa;
+        color:#fff;
+      }
+
+      .textos>h1{font-size: 70px;}
+      .textos>h2{font-size: 35px;}
+
+      .content-card{
+        width: 48%;
+        margin-bottom: var(--margenes);
+      }
+
+      .cont-work{
+        width: 80%;
+      }
+
+      :root{
+        --margenes: 30px
+      }
+
+      .caja-contenidos{
+        width: 90%;
+        margin-bottom: var(--margenes);
+      }
+    }
+
+    @media screen and (max-width: 500px){
+      :root{
+        --spacios-contenidos: 25px;
+      }
+
+      .content-card{
+        width: 90%;
+      }
+
+      .caja-contenidos{
+        width: 90%;
+        margin-bottom: var(--margenes);
+      }
+
+      .cont-work{
+        width: 85%;
+        
+      }
+
+      .agregar-imagen{
+        width: 95%;
+   }
+
+      .marca-logo{
+        width: 80%;
+      }
+
+      .icono{
+        margin:auto;
+      }
+    }
